@@ -1,0 +1,29 @@
+.Footer {
+  padding: 1rem 0 0.9rem;
+}
+
+.Footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Footer__copy {
+  color: #959595;
+  text-align: right;
+  font-family: SuisseIntl;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 124%;
+}
+
+.Footer__privacy {
+  color: #959595;
+  text-align: right;
+  font-family: SuisseIntl;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 124%;
+}

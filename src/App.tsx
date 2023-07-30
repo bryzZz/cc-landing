@@ -8,6 +8,7 @@ import { Cards } from "components/Cards";
 import { Rewards } from "components/Rewards";
 import { Subscribe } from "components/Subscribe";
 import { Social } from "components/Social";
+import { Footer } from "components/Footer";
 
 export const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ export const App: React.FC = () => {
       <Rewards />
       <Subscribe />
       <Social />
+      <Footer />
     </>
   );
 };

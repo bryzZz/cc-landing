@@ -6,7 +6,7 @@ import "./style.css";
 export const Header: React.FC = () => {
   return (
     <header className="header">
-      <div className="header__container">
+      <div className="container header__container">
         <Logo />
         <button className="btn btn--secondary">Contact us</button>
       </div>
