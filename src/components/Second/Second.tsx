@@ -7,7 +7,7 @@ import "./style.css";
 export const Second: React.FC = () => {
   return (
     <section className="section Second">
-      <div className="Second__container">
+      <div className="container Second__container">
         <h1 className="headline-1">
           Towers and cards are your path to victory!
         </h1>

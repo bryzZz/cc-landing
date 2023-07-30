@@ -7,8 +7,10 @@
   background-size: cover;
   background-position: center;
 
-  padding: 506px 80px 80px;
+  padding: 506px 0 80px;
+}
 
+.Third .slide__container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -32,7 +34,10 @@
 
 @media (max-width: 768px) {
   .Third .slide {
-    padding: 468px 16px 40px;
+    padding: 468px 0 40px;
+  }
+
+  .Third .slide__container {
     gap: 24px;
   }
 
