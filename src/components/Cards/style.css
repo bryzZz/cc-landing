@@ -1,0 +1,39 @@
+.Cards {
+  padding: 80px 80px 27px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  background: linear-gradient(207deg, #ec9229 0%, #d87400 100%);
+  backdrop-filter: blur(22px);
+
+  overflow: hidden;
+}
+
+.Cards .headline-1 {
+  max-width: 1050px;
+  z-index: 4;
+}
+
+.Cards .text {
+  max-width: 459px;
+  z-index: 4;
+}
+
+.cards__container {
+  display: flex;
+  z-index: 4;
+}
+
+@media (max-width: 768px) {
+  .Cards {
+    padding: 40px 16px 30px;
+  }
+
+  .Cards .headline-1,
+  .Cards .text {
+    max-width: none;
+  }
+}

@@ -1,0 +1,79 @@
+.Rewards {
+  background: linear-gradient(33deg, #4b546c 0%, #6b7796 65.47%, #7f8bab 100%);
+  padding: 80px 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+
+.Rewards .headline-1 {
+  width: 100%;
+  max-width: 800px;
+}
+
+.Rewards .text {
+  display: none;
+}
+
+.Rewards__items {
+  max-width: 519px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.Rewards__row {
+  display: flex;
+  gap: 2px;
+}
+
+.Rewards__row--last {
+  padding-left: 36px;
+}
+
+.Rewards__item {
+  white-space: nowrap;
+  padding: 24px 34px;
+
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(22px);
+}
+
+.Rewards__item--second {
+  margin-left: 110px;
+}
+
+.Rewards__item--third {
+  align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+  .Rewards {
+    padding: 40px 16px;
+    gap: 24px;
+    flex-direction: column;
+  }
+
+  .Rewards .text {
+    display: block;
+  }
+
+  .Rewards__item {
+    padding: 17px 22px;
+    border-radius: 18px;
+  }
+
+  .Rewards__row--last {
+    padding-left: 0px;
+  }
+
+  .Rewards__item--second {
+    margin-left: 82px;
+  }
+}

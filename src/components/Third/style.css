@@ -1,0 +1,43 @@
+.Third {
+  overflow: hidden;
+}
+
+.Third .slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding: 506px 80px 80px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.Third .slide > .headline-1 {
+  max-width: 610px;
+}
+
+.Third__text-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-end;
+}
+
+.Third__text-container > .text {
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .Third .slide {
+    padding: 468px 16px 40px;
+    gap: 24px;
+  }
+
+  .Third__text-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

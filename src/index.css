@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "TomatoGrotesk";
+  font-style: normal;
+  font-weight: 900;
+  src: local("TomatoGrotesk-Black"),
+    url("assets/fonts/TomatoGrotesk-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+  font-style: normal;
+  font-weight: 400;
+  src: local("SuisseIntl-Regular"),
+    url("assets/fonts/SuisseIntl-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Suisse-Intl-Medium"),
+    url("assets/fonts/Suisse-Intl-Medium.ttf") format("truetype");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  color: #fcfcfc;
+}
+
+body {
+  background-color: #0e0e0e;
+}
+
+#root {
+  overflow: hidden;
+}
+
+.section {
+  border-radius: 16px;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 16px;
+}
+
+.headline-1,
+.headline-2 {
+  font-family: TomatoGrotesk;
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 93%;
+  letter-spacing: -2%;
+}
+
+.btn {
+  font-family: SuisseIntl;
+  font-weight: 600;
+  font-size: 0.875rem;
+
+  padding: 0.625rem 0.875rem;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  opacity: 70%;
+}
+
+.btn--primary {
+  padding: 16px 30px;
+  border-radius: 8px;
+  background: #5562ea;
+}
+
+.btn--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.descriptor,
+.text,
+.clue,
+.btn {
+  font-family: SuisseIntl;
+  line-height: 120%;
+  font-weight: 400;
+  letter-spacing: -2%;
+}
+
+.text {
+  font-size: 1.4375rem;
+}
+
+.descriptor {
+  font-size: 1.0625rem;
+}
+
+.descriptor {
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .headline-1 {
+    font-size: 7.5rem;
+  }
+
+  .headline-2 {
+    font-size: 4.375rem;
+  }
+
+  .clue {
+    font-size: 1.125rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 124%;
+    letter-spacing: normal;
+  }
+
+  .section {
+    border-radius: 32px;
+  }
+
+  .descriptor {
+    font-size: 1.4375rem;
+  }
+}
