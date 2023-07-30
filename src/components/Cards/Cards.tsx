@@ -20,14 +20,14 @@ export const Cards: React.FC = () => {
       </p>
 
       <div className="cards__container">
-        {new Array(4).fill(0).map(() => (
-          <img src={CardClosed} />
+        {new Array(4).fill(0).map((_, i) => (
+          <img key={i} src={CardClosed} />
         ))}
 
         <img src={CardOpened} />
 
-        {new Array(4).fill(0).map(() => (
-          <img src={CardClosed} />
+        {new Array(4).fill(0).map((_, i) => (
+          <img key={i} src={CardClosed} />
         ))}
       </div>
 

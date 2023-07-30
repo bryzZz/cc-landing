@@ -42,6 +42,10 @@ body {
   position: relative;
 }
 
+.section:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 .container {
   max-width: 1280px;
   width: 100%;
