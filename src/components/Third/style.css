@@ -53,7 +53,7 @@
   position: relative;
   z-index: 2;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 20px;
 }
@@ -67,7 +67,6 @@
   display: flex;
   gap: 40px;
   align-items: flex-start;
-  padding-top: 20px;
 }
 
 .Third__text-container > .text {

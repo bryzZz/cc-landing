@@ -78,13 +78,14 @@ export const Third: React.FC = () => {
       });
 
       tl2.from(".Third--last", {
-        yPercent: 130,
+        delay: 1.6,
+        yPercent: 120,
         scale: 1.2,
       });
 
       const tl3 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".Third--last",
+          trigger: ".Third--last .slide__container",
           start: "top bottom",
         },
       });
@@ -98,19 +99,15 @@ export const Third: React.FC = () => {
         },
       });
 
-      tl3.from(
-        ".Third--last .headline-1 > span",
-        {
-          duration: 1,
-          opacity: 0,
-          y: 30,
-          transformOrigin: "50% 50%",
-          scale: 2,
-          ease: "power1.out",
-          stagger: 0.1,
-        },
-        "-=2"
-      );
+      tl3.from(".Third--last .headline-1 > span", {
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        transformOrigin: "50% 50%",
+        scale: 2,
+        ease: "power1.out",
+        stagger: 0.1,
+      });
 
       tl3.from(
         ".Third--last .text",
