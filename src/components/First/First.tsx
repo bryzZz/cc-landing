@@ -3,7 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import Fg from "assets/images/first-fg.png";
-import Bg from "assets/images/BG image.jpg";
+import Bg from "assets/images/BG image.png";
 import { ReactComponent as Logo } from "assets/icons/logo.svg";
 import { ReactComponent as Discord } from "assets/icons/Type=Default, Size=small.svg";
 

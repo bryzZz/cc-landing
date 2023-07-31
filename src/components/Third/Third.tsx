@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import CustomEase from "gsap/CustomEase";
 
 import { Headline } from "components/Headline";
 
@@ -9,7 +10,7 @@ import Bg2 from "assets/images/slide-2.jpg";
 
 import "./style.css";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 export const Third: React.FC = () => {
   const comp = useRef<HTMLDivElement>(null);
@@ -71,22 +72,23 @@ export const Third: React.FC = () => {
           trigger: ".Third__container",
           start: "top 5px",
           pin: true,
-          scrub: 3,
+          scrub: 1,
           anticipatePin: 1,
           snap: 1,
+          end: "+=200%",
         },
       });
 
       tl2.from(".Third--last", {
-        delay: 2,
-        yPercent: 110,
+        yPercent: 120,
         scale: 1.2,
+        duration: 1,
       });
 
       const tl3 = gsap.timeline({
         scrollTrigger: {
           trigger: ".Third--last .slide__container",
-          start: "top bottom",
+          start: "bottom bottom",
         },
       });
 

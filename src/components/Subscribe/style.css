@@ -12,11 +12,13 @@
 }
 
 .Subscribe .headline-2 {
-  max-width: 678px;
   min-width: 400px;
-  width: 100%;
-  flex-grow: 1;
-  /* flex-shrink: 0; */
+  max-width: 720px;
+}
+
+.Subscribe__content-container {
+  flex: 1;
+  max-width: 600px;
 }
 
 .Subscribe__submit {
@@ -28,7 +30,6 @@
 }
 
 .Subscribe__form {
-  flex-grow: 0;
   display: flex;
   gap: 8px;
   margin-bottom: 16px;
