@@ -18,7 +18,7 @@ export const Second: React.FC = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".Second__container",
-          start: "top bottom",
+          start: "center bottom",
         },
       });
 
