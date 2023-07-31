@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 import Fg from "assets/images/first-fg.png";
 import Bg from "assets/images/BG image.png";
@@ -8,17 +9,21 @@ import { ReactComponent as Discord } from "assets/icons/Type=Default, Size=small
 
 import "./style.css";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const First: React.FC = () => {
   const comp = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.to(".First__bg", {
-        scale: 1.5,
-        duration: 10,
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".First__bg",
+          // start: "top top",
+        },
       });
 
-      gsap.from(".First .logo", {
+      tl.from(".First .logo", {
         ease: "power1",
         duration: 1.3,
         rotate: -30,
@@ -26,27 +31,50 @@ export const First: React.FC = () => {
         opacity: 0,
       });
 
-      gsap.from(".First .text, .First .btn", {
-        ease: "power1",
-        duration: 1,
-        opacity: 0,
-        delay: 1.2,
-      });
+      tl.from(
+        ".First .text, .First .btn",
+        {
+          ease: "power1",
+          duration: 1,
+          opacity: 0,
+          // delay: 1.2,
+        },
+        "-=0.1"
+      );
 
-      gsap.from(".First .First__fg", {
-        ease: "power1",
-        scale: 2.5,
-        duration: 1,
-        delay: 2,
-        opacity: 0,
-      });
+      tl.from(
+        ".First .First__fg",
+        {
+          ease: "power1",
+          scale: 2.5,
+          duration: 1,
+          // delay: 2,
+          opacity: 0,
+        },
+        "-=0.3"
+      );
 
-      gsap.to(".First .First__fg", {
-        ease: "power1",
-        delay: 2,
-        duration: 10,
-        rotate: 10,
-      });
+      tl.to(
+        ".First .First__fg",
+        {
+          ease: "power1",
+          // delay: 2,
+          duration: 10,
+          rotate: 10,
+          repeat: 1,
+          yoyo: true,
+        },
+        "-=2"
+      );
+
+      tl.to(
+        ".First__bg",
+        {
+          scale: 1.5,
+          duration: 10,
+        },
+        "-=100%"
+      );
     }, comp);
 
     return () => ctx.revert();
