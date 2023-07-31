@@ -19,7 +19,6 @@ export const First: React.FC = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".First__bg",
-          // start: "top top",
         },
       });
 
@@ -37,7 +36,6 @@ export const First: React.FC = () => {
           ease: "power1",
           duration: 1,
           opacity: 0,
-          // delay: 1.2,
         },
         "-=0.1"
       );
@@ -48,7 +46,6 @@ export const First: React.FC = () => {
           ease: "power1",
           scale: 2.5,
           duration: 1,
-          // delay: 2,
           opacity: 0,
         },
         "-=0.3"
@@ -58,7 +55,6 @@ export const First: React.FC = () => {
         ".First .First__fg",
         {
           ease: "power1",
-          // delay: 2,
           duration: 10,
           rotate: 10,
           repeat: 1,

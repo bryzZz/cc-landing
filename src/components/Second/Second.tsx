@@ -1,12 +1,12 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-// import { SplitText } from "../../lib/SplitText";
 
 import FgLeft from "assets/images/second-fg-left.png";
 import FgRight from "assets/images/second-fg-right.png";
 
 import "./style.css";
+import { Headline } from "components/Headline";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,15 +62,10 @@ export const Second: React.FC = () => {
   return (
     <section ref={comp} className="section Second">
       <div className="Second__container">
-        <h1 className="headline-1">
-          {"Towers and cards are your path to victory!"
-            .split(" ")
-            .map((word) => (
-              <>
-                <span>{word}</span>{" "}
-              </>
-            ))}
-        </h1>
+        <Headline variant="h1">
+          Towers and cards are your path to victory!
+        </Headline>
+
         <p className="text">
           Create a unique deck of cards and engage in 1v1 battles, sending
           squads to the opponent's castle and defending your territory from
