@@ -13,6 +13,10 @@
 
 .Subscribe .headline-2 {
   max-width: 678px;
+  min-width: 400px;
+  width: 100%;
+  flex-grow: 1;
+  /* flex-shrink: 0; */
 }
 
 .Subscribe__submit {
@@ -24,6 +28,7 @@
 }
 
 .Subscribe__form {
+  flex-grow: 0;
   display: flex;
   gap: 8px;
   margin-bottom: 16px;
