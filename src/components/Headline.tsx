@@ -8,7 +8,7 @@ interface HeadlineProps {
 export const Headline: React.FC<HeadlineProps> = ({ variant, children }) => {
   const content = children.split(" ").map((word) => (
     <Fragment key={word}>
-      <span>{word}</span>{" "}
+      <span style={{ display: "inline-block" }}>{word}</span>{" "}
     </Fragment>
   ));
 
