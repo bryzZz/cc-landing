@@ -15,7 +15,7 @@ export const Subscribe: React.FC = () => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".Rewards__container",
+          trigger: ".Subscribe__container",
           start: "30% bottom",
         },
       });
@@ -39,6 +39,7 @@ export const Subscribe: React.FC = () => {
 
     return () => ctx.revert();
   }, []);
+
   return (
     <section ref={comp} className="section Subscribe">
       <div className="container Subscribe__container">
