@@ -71,15 +71,15 @@ export const Third: React.FC = () => {
           trigger: ".Third__container",
           start: "top 5px",
           pin: true,
-          scrub: 1,
+          scrub: 3,
           anticipatePin: 1,
           snap: 1,
         },
       });
 
       tl2.from(".Third--last", {
-        delay: 1.6,
-        yPercent: 120,
+        delay: 2,
+        yPercent: 110,
         scale: 1.2,
       });
 
