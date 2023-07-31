@@ -22,7 +22,18 @@ export const First: React.FC = () => {
         },
       });
 
-      tl.from(".First .logo", {
+      tl.add(
+        gsap.to(".First__bg", {
+          scale: 1.5,
+          duration: 10,
+        }),
+        0
+      );
+
+      const tl2 = gsap.timeline();
+      tl.add(tl2, 0);
+
+      tl2.from(".First .logo", {
         ease: "power1",
         duration: 1.3,
         rotate: -30,
@@ -30,7 +41,7 @@ export const First: React.FC = () => {
         opacity: 0,
       });
 
-      tl.from(
+      tl2.from(
         ".First .text, .First .btn",
         {
           ease: "power1",
@@ -40,7 +51,7 @@ export const First: React.FC = () => {
         "-=0.1"
       );
 
-      tl.from(
+      tl2.from(
         ".First .First__fg",
         {
           ease: "power1",
@@ -51,7 +62,7 @@ export const First: React.FC = () => {
         "-=0.3"
       );
 
-      tl.to(
+      tl2.to(
         ".First .First__fg",
         {
           ease: "power1",
@@ -61,15 +72,6 @@ export const First: React.FC = () => {
           yoyo: true,
         },
         "-=2"
-      );
-
-      tl.to(
-        ".First__bg",
-        {
-          scale: 1.5,
-          duration: 10,
-        },
-        "-=100%"
       );
     }, comp);
 
