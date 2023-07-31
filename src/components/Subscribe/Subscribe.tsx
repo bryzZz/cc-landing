@@ -1,14 +1,51 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+import { Headline } from "components/Headline";
 
 import "./style.css";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const Subscribe: React.FC = () => {
+  const comp = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".Rewards__container",
+          start: "30% bottom",
+        },
+      });
+
+      tl.from(".Subscribe .headline-2 > span", {
+        duration: 0.5,
+        opacity: 0,
+        y: 30,
+        transformOrigin: "50% 50%",
+        scale: 2,
+        ease: "power1.out",
+        stagger: 0.03,
+      });
+
+      tl.from(".Subscribe__content-container > *", {
+        x: -30,
+        opacity: 0,
+        stagger: 0.1,
+      });
+    }, comp);
+
+    return () => ctx.revert();
+  }, []);
   return (
-    <section className="section Subscribe">
+    <section ref={comp} className="section Subscribe">
       <div className="container Subscribe__container">
-        <h2 className="headline-2">
-          Will you be the first to know when the game is available for download?{" "}
-        </h2>
+        <Headline variant="h2">
+          Will you be the first to know when the game is available for download?
+        </Headline>
+
         <div className="Subscribe__content-container">
           <p className="text">
             Subscribe to our email newsletter to stay updated and receive
