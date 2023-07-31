@@ -55,7 +55,7 @@
   max-width: 1250px;
   bottom: 0;
   right: 0;
-  transform: translateX(60%) translateY(-20%) rotate(30deg);
+  transform: translateX(60%) translateY(-20%) rotate(55deg);
 }
 
 @media (max-width: 768px) {
@@ -73,7 +73,8 @@
   }
 
   .Cards__fg.Cards__fg--right {
-    transform: translateX(60%) translateY(-90%) rotate(30deg);
+    width: 120vw;
+    transform: translateX(55%) translateY(-90%) rotate(145deg);
   }
 
   .cards__container {

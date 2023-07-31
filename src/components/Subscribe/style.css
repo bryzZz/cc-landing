@@ -1,6 +1,7 @@
 .Subscribe {
   background: linear-gradient(197deg, #8a8fff 0%, #7277f9 45.31%, #4a50dc 100%);
   padding: 80px 0;
+  min-height: unset !important;
 }
 
 .Subscribe__container {
@@ -49,16 +50,6 @@
 }
 
 @media (max-width: 768px) {
-  .Third .slide {
-    padding: 468px 16px 40px;
-    gap: 24px;
-  }
-
-  .Third__text-container {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
   .Subscribe__container {
     flex-direction: column;
     gap: 24px;

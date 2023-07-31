@@ -30,22 +30,20 @@
   z-index: 2;
 }
 
-.Social .links__item:after {
-  content: "";
+.Social .links__item .ripple {
   display: block;
   position: absolute;
   top: -200%;
   right: -25%;
   width: 150%;
   height: 500%;
-  background: #5562ea;
   border-radius: 100%;
   opacity: 0;
   z-index: 1;
 }
 
-.Social .links__item:hover:after,
-.Social .links__item:active:after {
+.Social .links__item:hover .ripple,
+.Social .links__item:active .ripple {
   animation: ripple 0.3s ease-out forwards;
 }
 

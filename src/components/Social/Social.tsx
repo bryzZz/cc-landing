@@ -59,15 +59,40 @@ export const Social: React.FC = () => {
         <div className="links">
           <a href="https://google.com" target="_blank" className="links__item">
             <Discord />
+            <div
+              className="ripple"
+              style={{
+                backgroundColor: "#5562EA",
+              }}
+            />
           </a>
           <a href="https://google.com" target="_blank" className="links__item">
             <Twitter />
+            <div
+              className="ripple"
+              style={{
+                backgroundColor: "#1D9BF0",
+              }}
+            />
           </a>
           <a href="https://google.com" target="_blank" className="links__item">
             <Instagram />
+            <div
+              className="ripple"
+              style={{
+                background:
+                  "linear-gradient(263.8deg, #9319AE -2.71%, #B94789 43.16%, #E77E5D 98.52%)",
+              }}
+            />
           </a>
           <a href="https://google.com" target="_blank" className="links__item">
             <Linkedin />
+            <div
+              className="ripple"
+              style={{
+                backgroundColor: "#007AB9",
+              }}
+            />
           </a>
         </div>
       </div>

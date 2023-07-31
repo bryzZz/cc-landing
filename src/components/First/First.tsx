@@ -24,8 +24,8 @@ export const First: React.FC = () => {
 
       tl.add(
         gsap.to(".First__bg", {
-          scale: 1.5,
-          duration: 10,
+          scale: 1.2,
+          duration: 20,
         }),
         0
       );
@@ -94,7 +94,7 @@ export const First: React.FC = () => {
         </p>
 
         <button className="btn btn--primary btn--icon">
-          Join Our Discrod
+          <span>Join Our Discrod</span>
           <Discord />
         </button>
       </div>

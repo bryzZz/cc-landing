@@ -1,6 +1,7 @@
 .Rewards {
   background: linear-gradient(33deg, #4b546c 0%, #6b7796 65.47%, #7f8bab 100%);
   padding: 80px 0;
+  min-height: unset !important;
 }
 
 .Rewards__container {

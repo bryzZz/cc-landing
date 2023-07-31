@@ -61,16 +61,18 @@ export const Second: React.FC = () => {
 
   return (
     <section ref={comp} className="section Second">
-      <div className="Second__container">
-        <Headline variant="h1">
-          Towers and cards are your path to victory!
-        </Headline>
+      <div className="container">
+        <div className="Second__container">
+          <Headline variant="h1">
+            Towers and cards are your path to victory!
+          </Headline>
 
-        <p className="text">
-          Create a unique deck of cards and engage in 1v1 battles, sending
-          squads to the opponent's castle and defending your territory from
-          their attacks.
-        </p>
+          <p className="text">
+            Create a unique deck of cards and engage in 1v1 battles, sending
+            squads to the opponent's castle and defending your territory from
+            their attacks.
+          </p>
+        </div>
       </div>
       <img className="Second__fg Second__fg--left" src={FgLeft} />
       <img className="Second__fg Second__fg--right" src={FgRight} />

@@ -11,15 +11,15 @@
   font-style: normal;
   font-weight: 400;
   src: local("SuisseIntl-Regular"),
-    url("assets/fonts/SuisseIntl-Regular.ttf") format("truetype");
+    url("assets/fonts/SuisseIntl-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "SuisseIntl";
   font-style: normal;
   font-weight: 600;
-  src: local("Suisse-Intl-Medium"),
-    url("assets/fonts/Suisse-Intl-Medium.ttf") format("truetype");
+  src: local("SuisseIntl-Medium"),
+    url("assets/fonts/SuisseIntl-Medium.otf") format("opentype");
 }
 
 *,
@@ -40,6 +40,7 @@ body {
 .section {
   border-radius: 16px;
   position: relative;
+  min-height: 100vh;
 }
 
 .section:not(:last-child) {
@@ -69,11 +70,13 @@ body {
   font-weight: 600;
   font-size: 0.875rem;
 
-  padding: 0.625rem 0.875rem;
+  padding: 10px 0.875rem 7px;
   border-radius: 6px;
   outline: none;
   border: none;
   cursor: pointer;
+
+  transition: background 0.3s ease;
 }
 
 .btn--secondary {
@@ -92,6 +95,10 @@ body {
   background: #5562ea;
 }
 
+.btn--primary:hover {
+  background: #7883f4;
+}
+
 .btn--icon {
   display: flex;
   justify-content: center;
@@ -99,10 +106,14 @@ body {
   gap: 5px;
 }
 
+.btn--icon > span {
+  display: block;
+  padding-top: 3px;
+}
+
 .descriptor,
 .text,
-.clue,
-.btn {
+.clue {
   font-family: SuisseIntl;
   line-height: 120%;
   font-weight: 400;
@@ -136,9 +147,6 @@ body {
 
   .btn {
     font-size: 1rem;
-    font-weight: 600;
-    line-height: 124%;
-    letter-spacing: normal;
   }
 
   .section {
