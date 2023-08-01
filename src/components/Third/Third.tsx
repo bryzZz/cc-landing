@@ -93,10 +93,9 @@ export const Third: React.FC = () => {
           },
         })
         .from(".Third__slide:last-child", {
-          // delay: 2,
+          delay: 6,
           yPercent: 110,
-          // scale: 1.2,
-          duration: 5,
+          duration: 10,
         })
         .add(() => {}, "+=3");
 
