@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
     <header className="header">
       <div className="container header__container">
         <Logo />
-        <button className="btn btn--secondary">Contact us</button>
+        <button className="btn header__btn">Contact us</button>
       </div>
     </header>
   );

@@ -5,11 +5,27 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { Headline } from "components/Headline";
 
 import "./style.css";
+import { Input } from "components/Input";
+import { useForm } from "react-hook-form";
 
 gsap.registerPlugin(ScrollTrigger);
 
+interface SubscribeFormValues {
+  email: string;
+}
+
 export const Subscribe: React.FC = () => {
   const comp = useRef<HTMLDivElement>(null);
+
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm<SubscribeFormValues>();
+
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -52,9 +68,19 @@ export const Subscribe: React.FC = () => {
             Subscribe to our email newsletter to stay updated and receive
             notifications about the release of our game. We won't spam you :)
           </p>
-          <form className="Subscribe__form">
-            <input className="Subscribe__input" placeholder="Your Email" />
-            <button className="btn Subscribe__submit" type="submit">
+          <form onSubmit={onSubmit} className="Subscribe__form">
+            <Input
+              {...register("email", {
+                pattern: {
+                  value: /\S+@\S+\.\S+/,
+                  message: "",
+                },
+              })}
+              label="Your Email"
+              error={!!errors.email}
+            />
+
+            <button className="btn Subscribe__btn" type="submit">
               Subscribe
             </button>
           </form>

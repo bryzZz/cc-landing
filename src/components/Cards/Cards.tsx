@@ -58,31 +58,17 @@ export const Cards: React.FC = () => {
 
       const tl2 = gsap.timeline();
 
-      tl2.from(
-        ".Cards .card-open",
-        {
-          scale: 0,
-          rotate: -90,
-        },
-        "-=0.3"
-      );
+      tl.add(tl2, "-=1.2");
 
-      tl2.from(".Cards .card-closed.card-right", {
-        opacity: 0,
-        duration: 0.00001,
+      tl2.from(".cards__container", {
+        scale: 0,
+        rotate: -90,
       });
-      tl2.from(
-        ".Cards .card-closed.card-left",
-        {
-          opacity: 0,
-          duration: 0.00001,
-        },
-        "<"
-      );
 
       tl2.from(".Cards .card-closed.card-right", {
         right: 0,
       });
+
       tl2.from(
         ".Cards .card-closed.card-left",
         {
@@ -90,8 +76,6 @@ export const Cards: React.FC = () => {
         },
         "<"
       );
-
-      tl.add(tl2);
     }, comp);
 
     return () => ctx.revert();

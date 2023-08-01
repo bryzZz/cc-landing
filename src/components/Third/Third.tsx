@@ -17,7 +17,37 @@ export const Third: React.FC = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
+      // const timeline = gsap.timeline({
+      //   scrollTrigger: {
+      //     end: "+=6000",
+      //     pin: true,
+      //     pinSpacing: true,
+      //     scrub: true,
+      //     start: "top top",
+      //     snap: 0.1,
+      //     trigger: ".Third__container",
+      //   },
+      // });
+
+      ScrollTrigger.create({
+        // trigger: panel,
+        // start: "top bottom",
+        // end: "+=200%",
+        trigger: ".Third--first",
+        start: "top top",
+        // pin: true,
+        pin: true,
+        end: "+=200%",
+        pinSpacing: false,
+        scrub: 1,
+        // snap: 1,
+        // onLeave: () => {}
+      });
+      // });
+
+      // gsap.to(
+
+      /* const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".Third--first",
           start: "80% bottom",
@@ -120,7 +150,7 @@ export const Third: React.FC = () => {
           stagger: 0.1,
         },
         "-=1"
-      );
+      ); */
     }, comp);
 
     return () => ctx.revert();

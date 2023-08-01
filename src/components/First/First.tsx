@@ -3,7 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import Fg from "assets/images/first-fg.png";
-import Bg from "assets/images/BG image.png";
+import { ReactComponent as BG } from "assets/images/Vector.svg";
 import { ReactComponent as Logo } from "assets/icons/logo.svg";
 import { ReactComponent as Discord } from "assets/icons/Type=Default, Size=small.svg";
 
@@ -24,8 +24,9 @@ export const First: React.FC = () => {
 
       tl.add(
         gsap.to(".First__bg", {
-          scale: 1.2,
-          duration: 20,
+          scale: 1.5,
+          duration: 30,
+          rotate: 45,
         }),
         0
       );
@@ -80,7 +81,7 @@ export const First: React.FC = () => {
 
   return (
     <section ref={comp} className="section First">
-      <img src={Bg} className="First__bg" />
+      <BG className="First__bg" />
 
       <div className="First__head">
         <div className="inner" />
@@ -93,7 +94,7 @@ export const First: React.FC = () => {
           A new era of card games in the tower defense genre.
         </p>
 
-        <button className="btn btn--primary btn--icon">
+        <button className="btn First__btn">
           <span>Join Our Discrod</span>
           <Discord />
         </button>
