@@ -57,16 +57,20 @@
 .Third .slide .headline-1 {
   width: 100%;
   max-width: 630px;
+  flex-grow: 0;
 }
 
 .Third__text-container {
   display: flex;
   gap: 40px;
   align-items: flex-start;
+  flex-grow: 1;
+  /* width: 100%; */
 }
 
 .Third__text-container > .text {
-  max-width: 290px;
+  width: 290px;
+  /* width: 100%; */
 }
 
 @media (max-width: 1010px) {
