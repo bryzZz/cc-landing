@@ -49,12 +49,13 @@ export const Rewards: React.FC = () => {
           ease: "power1.out",
           stagger: 0.25,
         },
-        "-=0.2"
+        "-=1"
       );
     }, comp);
 
     return () => ctx.revert();
   }, []);
+
   return (
     <section ref={comp} className="section Rewards">
       <div className="container Rewards__container">
