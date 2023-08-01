@@ -19,7 +19,7 @@ export const App: React.FC = () => {
   useEffect(() => {
     const scroller = document.querySelector<HTMLElement>("#scroller")!;
 
-    const bodyScrollBar = Scrollbar.init(scroller, {
+    const scrollbar = Scrollbar.init(scroller, {
       damping: 0.1,
       delegateTo: document,
     });
@@ -27,14 +27,13 @@ export const App: React.FC = () => {
     ScrollTrigger.scrollerProxy("#scroller", {
       scrollTop(value) {
         if (arguments.length) {
-          bodyScrollBar.scrollTop = value as number;
+          scrollbar.scrollTop = value as number;
         }
-        return bodyScrollBar.scrollTop;
+        return scrollbar.scrollTop;
       },
     });
 
-    bodyScrollBar.addListener(ScrollTrigger.update);
-
+    scrollbar.addListener(ScrollTrigger.update);
     ScrollTrigger.defaults({ scroller: scroller });
   }, []);
 
