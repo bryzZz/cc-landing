@@ -12,7 +12,8 @@
 }
 
 .Subscribe .headline-2 {
-  min-width: 400px;
+  width: 100%;
+  /* min-width: 100%; */
   max-width: 720px;
 }
 
