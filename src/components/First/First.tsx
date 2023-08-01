@@ -27,6 +27,9 @@ export const First: React.FC = () => {
           scale: 1.5,
           duration: 30,
           rotate: 45,
+          repeat: -1,
+          ease: "power1.inOut",
+          yoyo: true,
         }),
         0
       );
