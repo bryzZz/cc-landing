@@ -29,6 +29,26 @@
   color: #fcfcfc;
 }
 
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 body {
   background-color: #19191b;
 }
@@ -37,7 +57,7 @@ body {
   overflow: hidden;
 }
 
-#scroller {
+/* #scroller {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
@@ -45,7 +65,7 @@ body {
 
 .scrollbar-track {
   display: none !important;
-}
+} */
 
 .section {
   border-radius: 16px;
