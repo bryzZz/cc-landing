@@ -72,7 +72,7 @@ export const First: React.FC = () => {
           ease: "power1",
           duration: 10,
           rotate: 10,
-          repeat: 1,
+          repeat: -1,
           yoyo: true,
         },
         "-=2"

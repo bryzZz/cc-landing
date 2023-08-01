@@ -88,14 +88,14 @@ export const Third: React.FC = () => {
             end: "+=100%",
             pin: true,
             pinSpacing: true,
-            scrub: true,
+            scrub: 1.5,
             snap: 0.1,
           },
         })
         .from(".Third__slide:last-child", {
-          delay: 2,
+          // delay: 2,
           yPercent: 110,
-          scale: 1.2,
+          // scale: 1.2,
           duration: 5,
         })
         .add(() => {}, "+=3");
