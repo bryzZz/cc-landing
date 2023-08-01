@@ -69,7 +69,7 @@ export const First: React.FC = () => {
       tl2.to(
         ".First .First__fg",
         {
-          ease: "power1",
+          ease: "power1.inOut",
           duration: 10,
           rotate: 10,
           repeat: -1,
