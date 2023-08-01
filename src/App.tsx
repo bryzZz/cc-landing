@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect } from "react";
-// import Scrollbar from "smooth-scrollbar";
-// import LocomotiveScroll from "locomotive-scroll";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -20,25 +18,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const App: React.FC = () => {
   useEffect(() => {
-    // const scroller = document.querySelector<HTMLElement>("#scroller")!;
-
-    // const scrollbar = Scrollbar.init(scroller, {
-    //   damping: 0.1,
-    //   delegateTo: document,
-    // });
-
-    // ScrollTrigger.scrollerProxy("#scroller", {
-    //   scrollTop(value) {
-    //     if (arguments.length) {
-    //       scrollbar.scrollTop = value as number;
-    //     }
-    //     return scrollbar.scrollTop;
-    //   },
-    // });
-
-    // scrollbar.addListener(ScrollTrigger.update);
-    // ScrollTrigger.defaults({ scroller: scroller });
-
     const lenis = new Lenis();
 
     lenis.on("scroll", ScrollTrigger.update);

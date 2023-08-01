@@ -57,7 +57,7 @@ export const Third: React.FC = () => {
         .timeline({
           scrollTrigger: {
             trigger: ".Third__slide:last-child",
-            start: "10% bottom",
+            start: "40% bottom",
           },
         })
         .from(".Third__slide:last-child .headline-1 > span", {
