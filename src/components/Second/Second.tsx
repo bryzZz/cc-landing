@@ -23,19 +23,19 @@ export const Second: React.FC = () => {
       });
 
       tl.from(".Second .headline-1 > span", {
-        duration: 1,
+        duration: 0.5,
         opacity: 0,
         y: 30,
         transformOrigin: "50% 50%",
         scale: 2,
         ease: "power1.out",
-        stagger: 0.1,
+        stagger: 0.03,
       });
 
       tl.from(
         ".Second .text",
         {
-          duration: 0.4,
+          duration: 0.3,
           opacity: 0,
           ease: "power1.out",
         },

@@ -60,10 +60,7 @@ export const Rewards: React.FC = () => {
     <section ref={comp} className="section Rewards">
       <div className="container Rewards__container">
         <Headline variant="h1">Each win brings more rewards. </Headline>
-        <p className="text">
-          As you battle, you will receive rewards and unique cards of different
-          rarities. Use them to become stronger in your next battles!
-        </p>
+
         <div className="Rewards__items">
           <div className="Rewards__row">
             <div className="Rewards__item descriptor">New cards</div>

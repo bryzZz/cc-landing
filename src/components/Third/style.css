@@ -97,4 +97,8 @@
   .Third__text-container > .text {
     max-width: unset;
   }
+
+  .Third .slide .headline-1 {
+    max-width: 326px;
+  }
 }

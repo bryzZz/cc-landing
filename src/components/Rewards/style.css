@@ -15,10 +15,6 @@
   max-width: 800px;
 }
 
-.Rewards .text {
-  display: none;
-}
-
 .Rewards__items {
   max-width: 480px;
   width: 100%;
@@ -61,12 +57,8 @@
   }
 
   .Rewards__container {
-    gap: 24px;
+    gap: 68px;
     flex-direction: column;
-  }
-
-  .Rewards .text {
-    display: block;
   }
 
   .Rewards__item {
