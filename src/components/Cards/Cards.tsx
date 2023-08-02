@@ -1,6 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import React from "react";
 
 import Fg from "assets/images/first-fg.png";
 import CardClosed from "assets/images/card-closed.png";
@@ -9,80 +7,9 @@ import CardOpened from "assets/images/card-opened.png";
 import "./style.css";
 import { Headline } from "components/Headline";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export const Cards: React.FC = () => {
-  const comp = useRef<HTMLDivElement>(null);
-
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".Cards .headline-1",
-          start: "10% bottom",
-        },
-      });
-
-      tl.from(".Cards .headline-1 > span", {
-        duration: 0.5,
-        opacity: 0,
-        y: 30,
-        transformOrigin: "50% 50%",
-        scale: 2,
-        ease: "power1.out",
-        stagger: 0.05,
-      });
-
-      tl.from(".Cards .text", {
-        duration: 1,
-        opacity: 0,
-        ease: "power1.out",
-        stagger: 0.1,
-      });
-
-      tl.from(".Cards__fg--left", {
-        opacity: 0,
-        ease: "power1.out",
-        xPercent: -100,
-      });
-
-      tl.from(
-        ".Cards__fg--right",
-        {
-          opacity: 0,
-          ease: "power1.out",
-          xPercent: 100,
-        },
-        "<"
-      );
-
-      const tl2 = gsap.timeline();
-
-      tl.add(tl2, "-=1.2");
-
-      tl2.from(".cards__container", {
-        scale: 0,
-        rotate: -90,
-      });
-
-      tl2.from(".Cards .card-closed.card-right", {
-        right: 0,
-      });
-
-      tl2.from(
-        ".Cards .card-closed.card-left",
-        {
-          left: 0,
-        },
-        "<"
-      );
-    }, comp);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section ref={comp} className="section Cards">
+    <section className="section Cards">
       <Headline variant="h1">
         Craft your deck and enter the battlefield!
       </Headline>

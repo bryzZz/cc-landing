@@ -1,6 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import React from "react";
 
 import FgLeft from "assets/images/second-fg-left.png";
 import FgRight from "assets/images/second-fg-right.png";
@@ -8,59 +6,9 @@ import FgRight from "assets/images/second-fg-right.png";
 import "./style.css";
 import { Headline } from "components/Headline";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export const Second: React.FC = () => {
-  const comp = useRef<HTMLDivElement>(null);
-
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".Second__container",
-          start: "center bottom",
-        },
-      });
-
-      tl.from(".Second .headline-1 > span", {
-        duration: 0.5,
-        opacity: 0,
-        y: 30,
-        transformOrigin: "50% 50%",
-        scale: 2,
-        ease: "power1.out",
-        stagger: 0.03,
-      });
-
-      tl.from(
-        ".Second .text",
-        {
-          duration: 0.3,
-          opacity: 0,
-          ease: "power1.out",
-        },
-        "-=0.2"
-      );
-
-      tl.from(".Second__fg", {
-        duration: 0.4,
-        bottom: -100,
-        opacity: 0,
-        ease: "power1.out",
-      });
-
-      tl.from(".Second__fg", {
-        duration: 0.4,
-        scale: 1.1,
-        ease: "power1.out",
-      });
-    }, comp);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section ref={comp} className="section Second">
+    <section className="section Second">
       <div className="container">
         <div className="Second__container">
           <Headline variant="h1">Start a new battle adventure!</Headline>
