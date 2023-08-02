@@ -127,7 +127,7 @@ export const App: React.FC = () => {
 
       tl.from(".Second__fg", {
         duration: 0.4,
-        bottom: -100,
+        yPercent: 100,
         opacity: 0,
         ease: "power1.out",
       });
