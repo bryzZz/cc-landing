@@ -84,11 +84,10 @@ export const Cards: React.FC = () => {
   return (
     <section ref={comp} className="section Cards">
       <Headline variant="h1">
-        Collect your deck and embark on the battle!
+        Craft your deck and enter the battlefield!
       </Headline>
       <p className="text">
-        As you battle, you will receive rewards and unique cards of different
-        rarities. Use them to become stronger in your next battles!
+        Earn unique cards from battles to boost your power in future duels!
       </p>
 
       <div className="cards__container">

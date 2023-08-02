@@ -55,6 +55,10 @@
     padding-left: 80px;
   }
 
+  .Second__container > .headline-1 {
+    max-width: 650px !important;
+  }
+
   .Second__container > .text {
     max-width: 430px;
     align-self: flex-end;

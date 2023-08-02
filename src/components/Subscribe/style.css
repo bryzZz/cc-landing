@@ -13,13 +13,12 @@
 
 .Subscribe .headline-2 {
   width: 100%;
-  /* min-width: 100%; */
-  max-width: 720px;
+  max-width: 550px;
 }
 
 .Subscribe__content-container {
   flex: 1;
-  max-width: 600px;
+  max-width: 510px;
 }
 
 .Subscribe .text {

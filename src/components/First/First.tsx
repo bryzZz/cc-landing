@@ -94,7 +94,7 @@ export const First: React.FC = () => {
         <Logo className="logo" />
 
         <p className="text">
-          A new era of card games in the tower defense genre.
+          Welcome to the next generation of tower defense card games!
         </p>
 
         <button className="btn First__btn">

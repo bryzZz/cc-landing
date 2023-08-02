@@ -63,14 +63,12 @@ export const Second: React.FC = () => {
     <section ref={comp} className="section Second">
       <div className="container">
         <div className="Second__container">
-          <Headline variant="h1">
-            Towers and cards are your path to victory!
-          </Headline>
+          <Headline variant="h1">Start a new battle adventure!</Headline>
 
           <p className="text">
-            Create a unique deck of cards and engage in 1v1 battles, sending
-            squads to the opponent's castle and defending your territory from
-            their attacks.
+            Create a strategic deck for intense PvP clashes. Attack enemy
+            castles while defending your own. Experience more than just a game,
+            it's a deep dive into strategic defense.
           </p>
         </div>
       </div>

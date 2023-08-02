@@ -119,16 +119,17 @@ export const Third: React.FC = () => {
           <img className="slide__img" src={Bg1} />
 
           <div className="container slide__container">
-            <Headline variant="h1">Defend yourself!</Headline>
+            <Headline variant="h1">Stand strong!</Headline>
 
             <div className="Third__text-container">
               <p className="text">
-                Build crystalline towers to protect your castle from the enemy
-                squad.
+                Create towers, filled with unique game mechanics, to shield your
+                castle from the enemy.
               </p>
               <p className="text">
-                The winner is determined by whose squads reach and destroy the
-                enemy castle.
+                Victory favors those who can lead squads to breach and dismantle
+                the enemy's castle. It's a perfect balance of offense and
+                defense.
               </p>
             </div>
           </div>
@@ -139,16 +140,16 @@ export const Third: React.FC = () => {
           <img className="slide__img" src={Bg2} />
 
           <div className="container slide__container">
-            <Headline variant="h1">Launch an attack!</Headline>
+            <Headline variant="h1">Time to strike!</Headline>
 
             <div className="Third__text-container">
               <p className="text">
-                Utilize your unique deck of cards and abilities to destroy the
-                enemy and emerge victorious in battle!
+                Use your unique card deck and abilities to overcome the enemy
+                and win!
               </p>
               <p className="text">
-                The more squads you send out, the greater your increase in
-                cyclic income
+                The more units you send out, the more money you'll get over
+                time. It's a smart and strategic way to play.
               </p>
             </div>
           </div>

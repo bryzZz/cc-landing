@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { Headline } from "components/Headline";
 
 import { ReactComponent as Discord } from "assets/icons/Type=discord, Size=Large.svg";
-import { ReactComponent as Twitter } from "assets/icons/Type=twitter, Size=Large.svg";
+import { ReactComponent as X } from "assets/icons/X.svg";
 import { ReactComponent as Instagram } from "assets/icons/Type=instagram, Size=Large.svg";
 import { ReactComponent as Linkedin } from "assets/icons/Type=linkedin, Size=Large.svg";
 
@@ -53,7 +53,7 @@ export const Social: React.FC = () => {
     <section ref={comp} className="section Social">
       <div className="container">
         <Headline variant="h1">
-          Stay informed! Follow the news on social media!
+          Stay updated! Follow us on social media.
         </Headline>
 
         <div className="links">
@@ -67,11 +67,11 @@ export const Social: React.FC = () => {
             />
           </a>
           <a href="https://google.com" target="_blank" className="links__item">
-            <Twitter />
+            <X />
             <div
               className="ripple"
               style={{
-                backgroundColor: "#1D9BF0",
+                backgroundColor: "#000000",
               }}
             />
           </a>

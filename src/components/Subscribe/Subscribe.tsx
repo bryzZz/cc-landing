@@ -60,13 +60,13 @@ export const Subscribe: React.FC = () => {
     <section ref={comp} className="section Subscribe">
       <div className="container Subscribe__container">
         <Headline variant="h2">
-          Will you be the first to know when the game is available for download?
+          Want to start strong and rule the game?
         </Headline>
 
         <div className="Subscribe__content-container">
           <p className="text">
-            Subscribe to our email newsletter to stay updated and receive
-            notifications about the release of our game. We won't spam you :)
+            Sign up for our email updates and get notified when the game is
+            ready. Start your legendary journey before others!
           </p>
           <form onSubmit={onSubmit} className="Subscribe__form">
             <Input
@@ -85,8 +85,8 @@ export const Subscribe: React.FC = () => {
             </button>
           </form>
           <p className="clue">
-            By clicking the "subscribe" button, you agree to the processing of
-            personal data.
+            By clicking "subscribe", you're agreeing to our data processing
+            policy.
           </p>
         </div>
       </div>
