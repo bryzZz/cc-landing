@@ -26,7 +26,7 @@ export const First: React.FC = () => {
         </p>
 
         <button className="btn First__btn">
-          <span>Join Our Discrod</span>
+          <span>Join Our Discord</span>
           <Discord />
         </button>
       </div>
