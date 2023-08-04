@@ -69,12 +69,12 @@
   }
 
   .Cards__fg.Cards__fg--left {
-    transform: translateX(-50%) translateY(80%);
+    transform: translateX(-50%) translateY(110%) rotate(-15deg) scale(2.1);
   }
 
   .Cards__fg.Cards__fg--right {
     width: 120vw;
-    transform: translateX(55%) translateY(-90%) rotate(145deg);
+    transform: translateX(80%) translateY(-130%) rotate(45deg) scale(-2.1, 2.1);
   }
 
   .cards__container {
