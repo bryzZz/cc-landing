@@ -22,7 +22,7 @@ export const Subscribe: React.FC = () => {
   });
 
   return (
-    <section className="section Subscribe">
+    <section id="Subscribe" className="section Subscribe">
       <div className="container Subscribe__container">
         <Headline variant="h2">
           Want to start strong and rule the game?
